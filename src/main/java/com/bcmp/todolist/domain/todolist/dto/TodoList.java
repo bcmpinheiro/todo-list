@@ -18,6 +18,9 @@ public record TodoList(
         String description,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
-        Long logId
+        Long logId,
+        @OneToOne
+        @JoinColumn(name = "todos_logs")
+        TodoListLogs todoListLogs
 ) {
 }

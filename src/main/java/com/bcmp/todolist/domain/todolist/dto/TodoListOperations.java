@@ -17,9 +17,6 @@ public record TodoListOperations(
         UUID taskOperationId,
         String type,
         LocalDateTime createdAt,
-        LocalDateTime updatedAt,
-        @OneToOne
-        @JoinColumn(name = "todos_operations")
-        TodoListLogs todoListLogs
+        LocalDateTime updatedAt
 ) {
 }

@@ -19,8 +19,9 @@ public record TodoListLogs(
         Long operation,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
+
         @OneToMany
-        @JoinColumn(name = "todoList_id")
-        TodoList todoList
+        @JoinColumn(name = "todos_operations")
+        TodoListOperations todoListOperations
 ) {
 }
