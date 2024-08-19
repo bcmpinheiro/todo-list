@@ -1,27 +1,26 @@
 package com.bcmp.todolist.domain.todolist.dto;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-@Table(name = "todos_logs")
 @Entity
 @AllArgsConstructor
-public record TodoListLogs(
+@NoArgsConstructor
+@Table(name = "todos_log")
+public class TodoListLogs {
 
         @Id
         @GeneratedValue
-        UUID taskLogId,
-        String description,
-        Long operation,
-        LocalDateTime createdAt,
-        LocalDateTime updatedAt,
+        private UUID taskLogId;
+        private String description;
+        private Long operation;
+        private LocalDateTime createdAt;
+        private LocalDateTime updatedAt;
 
         @OneToMany
         @JoinColumn(name = "todos_operations")
-        TodoListOperations todoListOperations
-) {
+        private TodoListOperations todoListOperations;
 }
