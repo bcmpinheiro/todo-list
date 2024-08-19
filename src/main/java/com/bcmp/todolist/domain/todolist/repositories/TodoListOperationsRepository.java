@@ -1,6 +1,6 @@
-package com.bcmp.todolist.infrastructure.repositories;
+package com.bcmp.todolist.domain.todolist.repositories;
 
-import com.bcmp.todolist.domain.todolist.dto.TodoListOperations;
+import com.bcmp.todolist.domain.todolist.entities.TodoListOperations;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 

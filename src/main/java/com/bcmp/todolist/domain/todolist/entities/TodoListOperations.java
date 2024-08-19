@@ -1,7 +1,8 @@
-package com.bcmp.todolist.domain.todolist.dto;
+package com.bcmp.todolist.domain.todolist.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -14,9 +15,13 @@ import java.util.UUID;
 public class TodoListOperations {
 
         @Id
-        @GeneratedValue
+        @GeneratedValue(generator = "UUID")
         private UUID taskOperationId;
         private String type;
+
+        @CreationTimestamp
         private LocalDateTime createdAt;
+
+        @CreationTimestamp
         private LocalDateTime updatedAt;
 }

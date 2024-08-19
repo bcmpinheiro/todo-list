@@ -1,0 +1,7 @@
+--CREATE TABLE todolist (
+--    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+--    description VARCHAR(250) NOT NULL,
+--    createdAt TIMESTAMP NOT NULL,
+--    updatedAt TIMESTAMP NOT NULL,
+--    logId INTEGER
+--);
